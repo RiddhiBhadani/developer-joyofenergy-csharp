@@ -70,9 +70,9 @@ namespace JOIEnergy.Tests
 
             var recommendations = ((IEnumerable<KeyValuePair<string, decimal>>)result).ToList();
             var expected = new List<KeyValuePair<string, decimal>>() {
-                new(PRICE_PLAN_2_ID, 38m),
-                new(PRICE_PLAN_3_ID, 76m),
-                new(PRICE_PLAN_1_ID, 380m),
+                new(PRICE_PLAN_2_ID, 9.5m),
+                new(PRICE_PLAN_3_ID, 19m),
+                new(PRICE_PLAN_1_ID, 95m),
             };
             Assert.Equal(expected, recommendations);
         }
@@ -89,8 +89,8 @@ namespace JOIEnergy.Tests
 
             var recommendations = ((IEnumerable<KeyValuePair<string, decimal>>)result).ToList();
             var expected = new List<KeyValuePair<string, decimal>>() {
-                new(PRICE_PLAN_2_ID, 16.667m),
-                new(PRICE_PLAN_3_ID, 33.333m),
+                new(PRICE_PLAN_2_ID, 9.375m),
+                new(PRICE_PLAN_3_ID, 18.750m),
             };
             Assert.Equal(expected, recommendations);
         }

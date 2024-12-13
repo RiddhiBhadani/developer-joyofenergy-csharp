@@ -9,14 +9,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
+using JOIEnergy.Enums;
 
 namespace JOIEnergy
 {
     public class Startup
     {
-        private const string MOST_EVIL_PRICE_PLAN_ID = "price-plan-0";
-        private const string RENEWABLES_PRICE_PLAN_ID = "price-plan-1";
-        private const string STANDARD_PRICE_PLAN_ID = "price-plan-2";
+        private static readonly string MOST_EVIL_PRICE_PLAN_ID = Supplier.DrEvilsDarkEnergy.ToString();
+        private static readonly string RENEWABLES_PRICE_PLAN_ID = Supplier.TheGreenEco.ToString();
+        private static readonly string STANDARD_PRICE_PLAN_ID = Supplier.PowerForEveryone.ToString();
 
         public Startup(IConfiguration configuration)
         {
